@@ -7,7 +7,7 @@ import { user, Prisma } from '@prisma/client';
 export class userService {
   constructor(private prisma: PrismaService) {}
 
-  async user( id: string
+  async get( id: string
   ): Promise<user | null> {
     return this.prisma.user.findUnique({
       where: {
@@ -16,25 +16,25 @@ export class userService {
     });
   }
 
-  async users(): Promise<user[]> {
+  async getAll(): Promise<user[]> {
     return this.prisma.user.findMany();
   }
 
   
-  async addUser(data: Prisma.userCreateInput ) {
+  async add(data: Prisma.userCreateInput ) {
     return this.prisma.user.create(
       {data}
     );
   }
 
-  updateUser(id: string, data: Prisma.userUpdateInput) {
+  async update(id: string, data: Prisma.userUpdateInput) {
     return this.prisma.user.update({
       where: { user_id: parseInt(id) },
       data: data
     })
   }
 
-  async deleteUser(id: string): Promise<user> {
+  async delete(id: string): Promise<user> {
     return this.prisma.user.delete({
       where: {user_id: parseInt(id)},
     });

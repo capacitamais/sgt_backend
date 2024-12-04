@@ -19,29 +19,29 @@ export class userController {
     private readonly userService: userService,
   ) {}
 
-  @Get('users')
-  async getAllUsers(): Promise<userModel[]> {
-    return this.userService.users();
+  @Get('user')
+  async getAll(): Promise<userModel[]> {
+    return this.userService.getAll();
   }
 
-  @Get("getuser/:id")
-  getUser(@Param("id") id: string): Promise<userModel | null> {
-    return this.userService.user(id);
+  @Get("user/:id")
+  async getUser(@Param("id") id: string): Promise<userModel | null> {
+    return this.userService.get(id);
   }
 
-  @Post("adduser")
-  addUser(@Body() user: userModel): Promise<userModel | null> {
-    return this.userService.addUser(user);
+  @Post("user")
+  async addUser(@Body() user: userModel): Promise<userModel | null> {
+    return this.userService.add(user);
   }
 
-  @Patch("updateuser/:id")
-  updateUser(@Param("id") id: string, @Body() data: userModel): Promise<userModel | null> {
-    return this.userService.updateUser(id, data);
+  @Patch("user/:id")
+  async updateUser(@Param("id") id: string, @Body() data: userModel): Promise<userModel | null> {
+    return this.userService.update(id, data);
   }
 
-  @Delete("deleteuser/:id")
+  @Delete("user/:id")
   deleteUser(@Param("id") id: string): Promise<userModel | null> {
-    return this.userService.deleteUser(id);
+    return this.userService.delete(id);
   }
  
   
