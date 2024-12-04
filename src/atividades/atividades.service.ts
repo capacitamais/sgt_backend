@@ -7,7 +7,7 @@ import { atividades, Prisma } from '@prisma/client';
 export class atividadesService {
   constructor(private prisma: PrismaService) {}
 
-  async getAtividade( id: string
+  async get( id: string
   ): Promise<atividades | null> {
     return this.prisma.atividades.findUnique({
       where: {
@@ -16,25 +16,25 @@ export class atividadesService {
     });
   }
 
-  async getAllAtividades(): Promise<atividades[]> {
+  async getAll(): Promise<atividades[]> {
     return this.prisma.atividades.findMany();
   }
 
   
-  async addAtividade(data: Prisma.atividadesCreateInput ) {
+  async add(data: Prisma.atividadesCreateInput ) {
     return this.prisma.atividades.create(
       {data}
     );
   }
 
-  updateAtividade(id: string, data: Prisma.atividadesUpdateInput) {
+  update(id: string, data: Prisma.atividadesUpdateInput) {
     return this.prisma.atividades.update({
       where: { atividade_id: parseInt(id) },
       data: data
     })
   }
 
-  async deleteAtividade(id: string): Promise<atividades> {
+  async delete(id: string): Promise<atividades> {
     return this.prisma.atividades.delete({
       where: {atividade_id: parseInt(id)},
     });

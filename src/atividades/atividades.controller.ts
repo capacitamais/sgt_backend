@@ -19,29 +19,29 @@ import {
       private readonly atividadesService: atividadesService,
     ) {}
   
-    @Get('getAllAtividades')
-    async getAllatividadess(): Promise<atividadesModel[]> {
-      return this.atividadesService.getAllAtividades();
+    @Get('atividade')
+    async getAll(): Promise<atividadesModel[]> {
+      return this.atividadesService.getAll();
     }
   
-    @Get("getAtividade/:id")
-    getatividades(@Param("id") id: string): Promise<atividadesModel | null> {
-      return this.atividadesService.getAtividade(id);
+    @Get("atividade/:id")
+    async get(@Param("id") id: string): Promise<atividadesModel | null> {
+      return this.atividadesService.get(id);
     }
   
-    @Post("addAtividade")
-    addatividades(@Body() atividades: atividadesModel): Promise<atividadesModel | null> {
-      return this.atividadesService.addAtividade(atividades);
+    @Post("atividade")
+    async addatividades(@Body() atividades: atividadesModel): Promise<atividadesModel | null> {
+      return this.atividadesService.add(atividades);
     }
   
-    @Patch("updateAtividade/:id")
-    updateatividades(@Param("id") id: string, @Body() data: atividadesModel): Promise<atividadesModel | null> {
-      return this.atividadesService.updateAtividade(id, data);
+    @Patch("atividade/:id")
+    async updateatividades(@Param("id") id: string, @Body() data: atividadesModel): Promise<atividadesModel | null> {
+      return this.atividadesService.update(id, data);
     }
   
-    @Delete("deleteAtividade/:id")
-    deleteatividades(@Param("id") id: string): Promise<atividadesModel | null> {
-      return this.atividadesService.deleteAtividade(id);
+    @Delete("atividade/:id")
+    async deleteatividades(@Param("id") id: string): Promise<atividadesModel | null> {
+      return this.atividadesService.delete(id);
     }
    
     

@@ -203,7 +203,7 @@
 			"name": "Atividade",
 			"item": [
 				{
-					"name": "getAtividade/:id",
+					"name": "get/:id",
 					"event": [
 						{
 							"listen": "test",
@@ -222,14 +222,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/getAtividade/2",
+							"raw": "http://localhost:3000/atividade/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"getAtividade",
+								"atividade",
 								"2"
 							]
 						},
@@ -238,7 +238,7 @@
 					"response": []
 				},
 				{
-					"name": "getAllAtividades",
+					"name": "getAll",
 					"event": [
 						{
 							"listen": "test",
@@ -257,14 +257,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/getAllAtividades",
+							"raw": "http://localhost:3000/atividade",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"getAllAtividades"
+								"atividade"
 							]
 						},
 						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
@@ -272,7 +272,7 @@
 					"response": []
 				},
 				{
-					"name": "addAtividade",
+					"name": "add",
 					"event": [
 						{
 							"listen": "test",
@@ -293,7 +293,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"atividade\": \"Atividade D\"\n}",
+							"raw": "{\n  \"atividade\": \"Atividade A\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -301,14 +301,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/addAtividade",
+							"raw": "http://localhost:3000/atividade",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"addAtividade"
+								"atividade"
 							]
 						},
 						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
@@ -316,7 +316,7 @@
 					"response": []
 				},
 				{
-					"name": "deleteAtividade/:id",
+					"name": "delete/:id",
 					"event": [
 						{
 							"listen": "test",
@@ -345,15 +345,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/deleteuser/1",
+							"raw": "http://localhost:3000/atividade/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"deleteuser",
-								"1"
+								"atividade",
+								"2"
 							]
 						},
 						"description": "This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code."
@@ -361,7 +361,7 @@
 					"response": []
 				},
 				{
-					"name": "updateAtividade/:id",
+					"name": "update/:id",
 					"request": {
 						"method": "PATCH",
 						"header": [],
@@ -375,15 +375,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/updateAtividade/1",
+							"raw": "http://localhost:3000/atividade/3",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"updateAtividade",
-								"1"
+								"atividade",
+								"3"
 							]
 						}
 					},
