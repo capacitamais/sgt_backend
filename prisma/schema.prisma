@@ -1,0 +1,51 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model atividades {
+  atividade_id Int     @id @default(autoincrement())
+  atividade    String? @db.VarChar(255)
+}
+
+model colaborador {
+  colaborador_id Int       @id @default(autoincrement())
+  nome           String?   @db.VarChar(255)
+  email          String?   @db.VarChar(255)
+  cpf            Int?
+  nascimento     DateTime? @db.Date
+  admissao       DateTime? @db.Date
+  desligamento   DateTime? @db.Date
+  cargo          String?   @db.VarChar(255)
+}
+
+model requisito_treinamento {
+  requisito_id   Int  @id @default(autoincrement())
+  id_atividade   Int?
+  id_treinamento Int?
+}
+
+model treinamento {
+  treinamento_id Int     @id @default(autoincrement())
+  nome           String? @db.VarChar(255)
+}
+
+model treinamento_realizado {
+  treinamento_realizado_id Int       @id @default(autoincrement())
+  id_colaborador           Int?
+  id_treinamento           Int?
+  data                     DateTime? @db.Date
+}
+
+model user {
+  user_id Int     @id @default(autoincrement())
+  nome    String  @db.VarChar(255)
+  email   String  @db.VarChar(255)
+  tipo    String  @db.VarChar(45)
+  senha   String  @db.VarChar(255)
+  cpf     String? @db.VarChar(11)
+}
