@@ -1,3 +1,4 @@
+USE
 INSERT INTO `user` (nome, email, tipo, senha, cpf) VALUES
 ('Admin User', 'admin@example.com', 'admin', 'senha123', '12345678901'),
 ('João Silva', 'joao.silva@example.com', 'colaborador', 'senha123', '12345678902'),

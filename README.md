@@ -1,99 +1,55 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+## UNISENAI - Análise e Desenvolvimento de Sistemas<br>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## PROJETO APLICADO 3 - 2024-1<br>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+- Antonio Hebert Mendonça dos Santos
+- Eric Lucca Naves Felipe
+- Jônatas Fred Rossetto
+- Joseli Divino
 
-## Description
+# Backend de um aplicativo para Gerenciamento de Treinamentos <br>
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Neste documento
 
-## Project setup
+- Sobre o aplicativo
+- Arquitetura do aplicativo
+- Stack
+- Instruções para execução
 
-```bash
-$ npm install
-```
+## Sobre o aplicativo
 
-## Compile and run the project
+O aplicativo será utilizado para a gestão de treinamentos.
+Este repositório se refere ao backend do aplicativo.
 
-```bash
-# development
-$ npm run start
+## Arquitetura do aplicativo
 
-# watch mode
-$ npm run start:dev
+- O aplicativo é estruturado em três camadas principais, uma camada de front-end, uma camada de back-end e uma camada de persistência.<br>
+- A camada de front-end foi desenvolvida como uma SPA (Single Page Application) utilizando o framework Angular, com NodeJs e TypeScript, o design das telas foi implementado utilizando-se a biblioteca de componentes Bootstrap. O front-end se comunica com a api rest do back-end através de requisições http com autorização concedida por um token JWT fornecido pelo back-end no momento do login.<br>
+- A camada de back-end foi desenvolvida em Node com auxílio do framework NestJs para implementação dos end-points REST que realizam as operações do sistema. A autorização de acesso aos end-points é realizada através da validadação de um token JWT. O acesso via CORS está habilitado até a finalização dos teste. O Prisma ORM é utilizado para a comunicação com a camada de persistência. O gerenciador de dependências é o Npm.<br>
+- A camada de persistência é implementada com o MySql, um sistema gerenciador de banco de dados relacional.<br>
 
-# production mode
-$ npm run start:prod
-```
+## Stack:
 
-## Run tests
+- IDE Vscode >2023-09
+- npm
+- Nodejs v22.11.0
+- Nestjs 10.4.8
+- Prisma 6.0.1
+- MySql com o Workbench 8.0
+- JWT
+- Postman
 
-```bash
-# unit tests
-$ npm run test
+## Instruções para execução do backend
 
-# e2e tests
-$ npm run test:e2e
+Baixar ou clonar este repositório.
 
-# test coverage
-$ npm run test:cov
-```
+### Back-end
 
-## Deployment
+- Utilizando o MySql Workbench, executar o script createTables.sql (para criar o esquema de tabelas)
+- Utilizando o MySql Workbench, executar o script sampleData.sql (para popular as tabelas)
+- No prompt de comando executar: npm start 
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+### Esquema do Postman para teste dos endpoints
 
-```bash
-$ npm install -g mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+SGT REST API.postman_collection.json
