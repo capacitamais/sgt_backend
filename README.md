@@ -1,6 +1,6 @@
 ## UNISENAI - Análise e Desenvolvimento de Sistemas<br>
 
-## PROJETO APLICADO 3 - 2024-1<br>
+## PROJETO APLICADO 3 - 2024-2<br>
 
 - Antonio Hebert Mendonça dos Santos
 - Eric Lucca Naves Felipe
@@ -28,7 +28,7 @@ Este repositório se refere ao backend do aplicativo.
 - A camada de back-end foi desenvolvida em Node com auxílio do framework NestJs para implementação dos end-points REST que realizam as operações do sistema. A autorização de acesso aos end-points é realizada através da validadação de um token JWT. O acesso via CORS está habilitado até a finalização dos teste. O Prisma ORM é utilizado para a comunicação com a camada de persistência. O gerenciador de dependências é o Npm.<br>
 - A camada de persistência é implementada com o MySql, um sistema gerenciador de banco de dados relacional.<br>
 
-## Stack:
+## Backend Stack:
 
 - IDE Vscode >2023-09
 - npm
