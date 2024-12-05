@@ -41,15 +41,23 @@ Este repositório se refere ao backend do aplicativo.
 
 ## Instruções para execução do backend
 
-Baixar ou clonar este repositório.
+- Baixar ou clonar este repositório.
+
+- Na pasta principal adicionar o arquivo .env com o conteúdo abaixo (lembre de alterar o login e senha, no meu caso root:1234, para os dados do seu servidor mysql)
+
+DATABASE_URL='mysql://root:1234@localhost:3306/sgt'
 
 ### Back-end
 
 - Utilizando o MySql Workbench, executar o script createTables.sql (para criar o esquema de tabelas)
 - Utilizando o MySql Workbench, executar o script sampleData.sql (para popular as tabelas)
+- No prompt de comando executar: npm install
+- No prompt de comando executar: npx prisma generate
 - No prompt de comando executar: npm start 
-
+- Para testar, no navegador acesse http://localhost:3000/user 
 
 ### Esquema do Postman para teste dos endpoints
 
-SGT REST API.postman_collection.json
+- O esquema de testes dos endpoints utilizando o Postman está no arquivo: SGT REST API.postman_collection.json
+
+

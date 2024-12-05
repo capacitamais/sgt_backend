@@ -222,14 +222,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/user/2",
+							"raw": "http://localhost:3000/colaborador/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"user",
+								"colaborador",
 								"2"
 							]
 						},
@@ -257,14 +257,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/user",
+							"raw": "http://localhost:3000/colaborador",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"user"
+								"colaborador"
 							]
 						},
 						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
@@ -293,7 +293,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"nome\": \"Lisa\",\n  \"email\": \"lisa@gmail.com\",\n  \"tipo\":\"user\",\n  \"senha\":\"123\",\n  \"cpf\":\"1234\"\n}",
+							"raw": "{\n    \"nome\": \"Maria\",\n    \"email\": \"maria@gmail.com\",\n    \"cpf\": 1234,\n    \"nascimento\": \"1980-01-01T00:00:00.000Z\",\n    \"admissao\": \"2000-02-01T00:00:00.000Z\",\n    \"desligamento\": null,\n    \"cargo\": \"Diretora\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -301,14 +301,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/user",
+							"raw": "http://localhost:3000/colaborador",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"user"
+								"colaborador"
 							]
 						},
 						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
@@ -374,15 +374,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/user/6",
+							"raw": "http://localhost:3000/colaborador/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"user",
-								"6"
+								"colaborador",
+								"2"
 							]
 						},
 						"description": "This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code."
@@ -606,14 +606,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/getAtividade/2",
+							"raw": "http://localhost:3000/treinamento/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"getAtividade",
+								"treinamento",
 								"2"
 							]
 						},
@@ -641,14 +641,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/getAllAtividades",
+							"raw": "http://localhost:3000/treinamento",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"getAllAtividades"
+								"treinamento"
 							]
 						},
 						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
@@ -677,7 +677,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"atividade\": \"Atividade D\"\n}",
+							"raw": "{\n  \"nome\": \"Treinamento A\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -685,14 +685,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/addAtividade",
+							"raw": "http://localhost:3000/treinamento",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"addAtividade"
+								"treinamento"
 							]
 						},
 						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
@@ -729,14 +729,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/deleteuser/1",
+							"raw": "http://localhost:3000/treinamento/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"deleteuser",
+								"treinamento",
 								"1"
 							]
 						},
@@ -751,7 +751,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"atividade\": \"Atividade AA\"\r\n}",
+							"raw": "{\r\n  \"nome\": \"Treinamento AA\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -759,14 +759,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/updateAtividade/1",
+							"raw": "http://localhost:3000/treinamento/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"updateAtividade",
+								"treinamento",
 								"1"
 							]
 						}
@@ -798,14 +798,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/getAtividade/2",
+							"raw": "http://localhost:3000/requisito/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"getAtividade",
+								"requisito",
 								"2"
 							]
 						},
@@ -833,14 +833,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/getAllAtividades",
+							"raw": "http://localhost:3000/requisito",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"getAllAtividades"
+								"requisito"
 							]
 						},
 						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
@@ -869,7 +869,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"atividade\": \"Atividade D\"\n}",
+							"raw": "{\n    \"id_atividade\": 7,\n    \"id_treinamento\": 7\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -877,14 +877,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/addAtividade",
+							"raw": "http://localhost:3000/requisito",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"addAtividade"
+								"requisito"
 							]
 						},
 						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
@@ -921,14 +921,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/deleteuser/1",
+							"raw": "http://localhost:3000/requisito/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"deleteuser",
+								"requisito",
 								"1"
 							]
 						},
@@ -943,7 +943,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"atividade\": \"Atividade AA\"\r\n}",
+							"raw": "{\r\n    \"id_atividade\": 4,\r\n    \"id_treinamento\": 3\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -951,14 +951,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/updateAtividade/1",
+							"raw": "http://localhost:3000/requisito/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"updateAtividade",
+								"requisito",
 								"1"
 							]
 						}
@@ -990,14 +990,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/getAtividade/2",
+							"raw": "http://localhost:3000/realizado/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"getAtividade",
+								"realizado",
 								"2"
 							]
 						},
@@ -1025,14 +1025,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/getAllAtividades",
+							"raw": "http://localhost:3000/realizado",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"getAllAtividades"
+								"realizado"
 							]
 						},
 						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
@@ -1061,7 +1061,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"atividade\": \"Atividade D\"\n}",
+							"raw": "{\n        \"id_colaborador\": 2,\n        \"id_treinamento\": 3,\n        \"data\": \"2024-12-03T00:00:00.000Z\"\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1069,14 +1069,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/addAtividade",
+							"raw": "http://localhost:3000/realizado",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"addAtividade"
+								"realizado"
 							]
 						},
 						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
@@ -1113,14 +1113,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/deleteuser/1",
+							"raw": "http://localhost:3000/realizado/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"deleteuser",
+								"realizado",
 								"1"
 							]
 						},
@@ -1135,7 +1135,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"atividade\": \"Atividade AA\"\r\n}",
+							"raw": "{\r\n        \"id_colaborador\": 1,\r\n        \"id_treinamento\": 2,\r\n        \"data\": \"2024-12-03T00:00:00.000Z\"\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1143,15 +1143,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/updateAtividade/1",
+							"raw": "http://localhost:3000/realizado/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"updateAtividade",
-								"1"
+								"realizado",
+								"2"
 							]
 						}
 					},
