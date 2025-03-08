@@ -1,11 +1,12 @@
 ## UNISENAI - Análise e Desenvolvimento de Sistemas<br>
 
-## PROJETO APLICADO 3 - 2024-2<br>
+## PROJETO APLICADO 4 - 2025-1<br>
 
 - Antonio Hebert Mendonça dos Santos
-- Eric Lucca Naves Felipe
-- Jônatas Fred Rossetto
+- Daniel Andrade Silva
+- Enrik 
 - Joseli Divino
+- Miyuki Araújo Hirata
 
 # Backend de um aplicativo para Gerenciamento de Treinamentos <br>
 
