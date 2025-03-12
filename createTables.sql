@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `sgt`.`colaborador` (
   `colaborador_id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(255) NULL,
   `email` VARCHAR(255) NULL,
-  `cpf` INT NULL,
+  `cpf` CHAR(11) NULL,
   `nascimento` DATE NULL,
   `admissao` DATE NULL,
   `desligamento` DATE NULL,
